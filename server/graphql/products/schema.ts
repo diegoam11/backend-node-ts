@@ -1,11 +1,12 @@
 import { gql } from "apollo-server-express";
 
 export const schema = gql`
-  extend type Query {
-    testProdQ: Int
-  }
+    extend type Query {
+        testProdQ: Int
+    }
 
-  extend type Mutation {
-    testProdM: Boolean
-  }
+    extend type Mutation {
+        testProdM: Boolean
+        addProducts(accountId: ID!, products: [ProductInput!]!): [Product!]!
+    }
 `;
