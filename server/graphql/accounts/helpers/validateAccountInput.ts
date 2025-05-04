@@ -1,3 +1,5 @@
+import { ApolloError } from "apollo-server-express";
+
 export function validateAccountInput({
     name,
     email,
@@ -6,10 +8,10 @@ export function validateAccountInput({
     email: string;
 }) {
     if (!name.trim()) {
-        throw new Error("Name is required.");
+        throw new ApolloError("Name is required.");
     }
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-        throw new Error("Invalid email format.");
+        throw new ApolloError("Invalid email format.");
     }
 }
