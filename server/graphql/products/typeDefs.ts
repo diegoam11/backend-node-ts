@@ -11,6 +11,7 @@ export const typeDefs = gql`
         name: String!
         sku: String!
         accountId: ID!
+        account: Account
         createdAt: String
         updatedAt: String
     }

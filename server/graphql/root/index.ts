@@ -39,4 +39,9 @@ export const resolvers: any = {
         ...accountsMutations,
         ...productsMutations,
     },
+    Product: {
+        account: async (parent: any, _args: any, context: any) => {
+            return context.loaders.accountLoader.load(parent.accountId);
+        },
+    },
 };
