@@ -1,6 +1,6 @@
 import { gql } from "apollo-server-express";
 
-export const types = gql`
+export const typeDefs = gql`
     input ProductInput {
         name: String!
         sku: String!
@@ -13,5 +13,10 @@ export const types = gql`
         accountId: ID!
         createdAt: String
         updatedAt: String
+    }
+
+    type ProductList {
+        total: Int!
+        products: [Product!]!
     }
 `;
