@@ -70,7 +70,7 @@ Al ejecutar `npm run test`, se muestra por consola el resultado, pero también s
 
 ## 🛠 Cómo Correr el Proyecto Localmente
 
-### Backend (API GraphQL)[ESTE PROYECTO]
+### Backend (API GraphQL) | Este proyecto
 
 1. Clonar el repositorio y posicionarse en la raíz del proyecto.
 
