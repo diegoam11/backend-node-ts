@@ -154,8 +154,7 @@ El sistema fue desplegado en un servidor Ubuntu (Droplet en DigitalOcean), utili
 | Servicio                  | URL                                                                                                             |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | Frontend                  | [`https://www.damdev.site/equip/`](https://www.damdev.site/equip/)                                              |
-| Backend API               | [`https://www.damdev.site/equip/api/graphql`](https://www.damdev.site/equip/api/graphql)                        |
-| GraphQL Playground        | [`https://www.damdev.site/equip/api/graphql`](https://www.damdev.site/equip/api/graphql) *(POST requests only)* |
+| Backend API/GraphQL Playground               | [`https://www.damdev.site/equip/api/graphql`](https://www.damdev.site/equip/api/graphql)                        |
 | MongoDB eiAccounts        | `mongodb://equip:BackendChallenge@damdev.site:27017/eiAccounts`                                                 |
 | MongoDB eiProducts        | `mongodb://equip:BackendChallenge@damdev.site:27017/eiProducts`                                                 |
 | MongoDB eiAccounts (test) | `mongodb://equip:BackendChallenge@damdev.site:27017/eiAccountsTest`                                             |
@@ -172,7 +171,7 @@ De forma general, se siguieron los siguientes pasos:
 3. Se clonaron los repositorios del backend y frontend en el servidor, dentro del directorio `/var/www/`.
 4. Se instalaron las dependencias para ambos proyectos, tanto backend como frontend.
 5. Se construyeron tanto el backend como el frontend en modo producción.
-6. Se configuró un archivo de Nginx que permite servir el frontend desde la ruta `/equip/` y redirige las solicitudes a `/equip/api/` hacia el backend (Express).
-7. Se utilizó Certbot (Let's Encrypt) para habilitar HTTPS sobre el dominio `damdev.site`.
+6. Se configuró un archivo de `Nginx` que permite servir el frontend desde la ruta `/equip/` y redirige las solicitudes a `/equip/api/` hacia el backend (Express).
+7. Se utilizó `Certbot (Let's Encrypt)` para habilitar HTTPS sobre el dominio `damdev.site`.
 8. El backend fue levantado y mantenido en segundo plano usando `PM2`, asegurando su persistencia ante reinicios.
 9. Finalmente, se validó la conexión de las aplicaciones con las bases de datos MongoDB desplegadas, asegurando que tanto en producción como en testing los entornos funcionaran correctamente.
