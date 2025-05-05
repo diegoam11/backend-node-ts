@@ -10,7 +10,7 @@ const makeNewConnection = (name: string, uri: string) => {
     const db = mongoose.createConnection(uri);
 
     if (process.env.NODE_ENV === "test") {
-        name = name + "_test";
+        name = name + "Test";
     }
 
     db.on("error", (error) => {

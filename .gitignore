@@ -20,7 +20,7 @@ public/css/main.css
 coverage
 
 # API keys and secrets
-.env
+#.env
 
 # Dependency directory
 node_modules
@@ -43,3 +43,6 @@ package-lock.json
 
 # vscode
 .vscode
+
+# jest report
+test-report.html
