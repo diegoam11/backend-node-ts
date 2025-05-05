@@ -10,17 +10,4 @@ export const schema = gql`
         testAccM: Boolean
         createAccount(name: String!, email: String!): Account!
     }
-
-    type Account {
-        _id: ID!
-        name: String!
-        email: String!
-        createdAt: String
-        updatedAt: String
-    }
-
-    type AccountList {
-        total: Int!
-        accounts: [Account!]!
-    }
 `;

@@ -4,6 +4,7 @@ import {
     schema as accountsSchema,
     queries as accountsQueries,
     mutations as accountsMutations,
+    typeDefs as accountTypeDefs,
 } from "../accounts";
 
 import {
@@ -25,6 +26,7 @@ const rootTypeDefs = gql`
 
 export const typeDefs = [
     rootTypeDefs,
+    accountTypeDefs,
     productTypeDefs,
     accountsSchema,
     productsSchema,
