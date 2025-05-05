@@ -22,7 +22,7 @@ async function startApolloServer(app: any) {
         plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],
     });
     await apolloServer.start();
-    apolloServer.applyMiddleware({ app, path: "/graphql" });
+    apolloServer.applyMiddleware({ app, path: "/api/graphql" });
 }
 
 export { startApolloServer };
