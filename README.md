@@ -104,6 +104,8 @@ Al ejecutar `npm run test`, se muestra por consola el resultado, pero también s
    ```bash
    npm run dev
    ```
+   
+   [`http://localhost:3000/api/graphql`](http://localhost:3000/api/graphql)
 
 ### Frontend (Vite + React)
 
@@ -132,6 +134,7 @@ Al ejecutar `npm run test`, se muestra por consola el resultado, pero también s
    ```bash
    npm run dev
    ```
+   [`http://localhost:3001/`](http://localhost:3001/)
 
 ---
 
