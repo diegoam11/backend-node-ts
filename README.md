@@ -70,7 +70,7 @@ Al ejecutar `npm run test`, se muestra por consola el resultado, pero también s
 
 ## 🛠 Cómo Correr el Proyecto Localmente
 
-### Backend (API GraphQL)
+### Backend (API GraphQL)[ESTE PROYECTO]
 
 1. Clonar el repositorio y posicionarse en la raíz del proyecto.
 
@@ -107,7 +107,7 @@ Al ejecutar `npm run test`, se muestra por consola el resultado, pero también s
    
    [`http://localhost:3000/api/graphql`](http://localhost:3000/api/graphql)
 
-### Frontend (Vite + React)
+### Frontend (Vite + React) | [`https://github.com/diegoam11/frontend-graphql`](https://github.com/diegoam11/frontend-graphql)
 
 1. Clonar el repositorio y posicionarse en la raíz del proyecto.
 
