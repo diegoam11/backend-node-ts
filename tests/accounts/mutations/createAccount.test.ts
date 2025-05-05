@@ -1,9 +1,20 @@
+/**
+ * @jest-environment node
+ */
+
 import { mutations } from "../../../server/graphql/accounts/mutations";
 import Accounts from "../../../server/models/accounts";
+import Products from "../../../server/models/products";
 import { cnxAccounts, cnxProducts } from "../../../server/db/mongodb";
+
+beforeAll(async () => {
+    await Accounts.deleteMany({});
+    await Products.deleteMany({});
+});
 
 afterAll(async () => {
     await Accounts.deleteMany({});
+    await Products.deleteMany({});
     await Promise.all([cnxAccounts.close(), cnxProducts.close()]);
 });
 

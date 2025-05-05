@@ -1,12 +1,19 @@
+/**
+ * @jest-environment node
+ */
+
 import { mutations as productMutations } from "../../../server/graphql/products/mutations";
 import { mutations as accountMutations } from "../../../server/graphql/accounts/mutations";
 import { queries } from "../../../server/graphql/products/queries";
 import Products from "../../../server/models/products";
-import { cnxProducts, cnxAccounts } from "../../../server/db/mongodb";
 import Accounts from "../../../server/models/accounts";
+import { cnxAccounts, cnxProducts } from "../../../server/db/mongodb";
+
+let testAccountId: string;
 
 beforeAll(async () => {
     await Products.deleteMany({});
+    await Accounts.deleteMany({});
 
     // crear cuenta de prueba para asociarla a los productos
     const account = await accountMutations.createAccount(
@@ -17,11 +24,13 @@ beforeAll(async () => {
         },
     );
 
+    testAccountId = account._id;
+
     // usar addProducts para insertar productos correctamente
     await productMutations.addProducts(
         {},
         {
-            accountId: account._id,
+            accountId: testAccountId,
             products: [
                 { name: "Product A", sku: "SKU001" },
                 { name: "Product B", sku: "SKU002" },
@@ -34,8 +43,7 @@ beforeAll(async () => {
 afterAll(async () => {
     await Products.deleteMany({});
     await Accounts.deleteMany({});
-    await cnxProducts.close();
-    await cnxAccounts.close();
+    await Promise.all([cnxAccounts.close(), cnxProducts.close()]);
 });
 
 describe("listProducts", () => {

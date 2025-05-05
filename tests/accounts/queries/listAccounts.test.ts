@@ -1,9 +1,16 @@
+/**
+ * @jest-environment node
+ */
+
 import { queries } from "../../../server/graphql/accounts/queries";
 import Accounts from "../../../server/models/accounts";
+import Products from "../../../server/models/products";
 import { cnxAccounts, cnxProducts } from "../../../server/db/mongodb";
 
 beforeAll(async () => {
     await Accounts.deleteMany({});
+    await Products.deleteMany({});
+
     await Accounts.insertMany([
         { name: "Alice", email: "alice@example.com" },
         { name: "Bob", email: "bob@example.com" },
@@ -13,6 +20,7 @@ beforeAll(async () => {
 
 afterAll(async () => {
     await Accounts.deleteMany({});
+    await Products.deleteMany({});
     await Promise.all([cnxAccounts.close(), cnxProducts.close()]);
 });
 

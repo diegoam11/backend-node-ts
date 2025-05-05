@@ -14,4 +14,5 @@ export default {
         ],
     ],
     setupFiles: ["<rootDir>/jest.setup.ts"],
+    maxWorkers: 1,
 };
