@@ -1,70 +1,41 @@
-<img src="./logo.png" alt="Project Logo or Image" width="120" height="100" style="margin-bottom: -30px">
 
-# Reto - Backend ExpressTS/GraphQL/MongoDB
+## ✅ Conocimientos Aplicados
 
-```
-Fecha inicio: 23/04/2025
-Fecha fin: 25/04/2025
-Fecha respuesta: 29/04/2025
-```
+- ✅ MongoDB  
+- ✅ Typescript  
+- ✅ ExpressJS  
+- ✅ GraphQL  
 
-#### Conocimientos Requeridos:
+---
 
-- [x] MongoDB
-- [x] Typescript
-- [x] ExpressJS
-- [x] GraphQL
+## ✅ Descripción
 
-#### Descripción:
+Los usuarios cliente pueden cargar productos vinculados a sus cuentas. Luego, pueden listar y/o buscar productos, visualizando también el detalle de la cuenta asociada a cada producto.
 
-Los usuarios cliente podrán cargar productos vinculados a sus cuentas. Luego, podrán listar y/o buscar productos donde podrán visualizar el detalle de la cuenta asociada a cada producto.
+Este proyecto está conectado a dos bases de datos: **eiAccounts** y **eiInventories**.
 
-Este proyecto está conectado a 2 bases de datos **eiAccounts** y **eiInventories**. La lista de productos está relacionada a la cuenta con la que se asoció al momento de la carga inicial.
+---
 
-#### Tareas:
+## ✅ Tareas Completadas
 
-##### A. Cuentas:
+### A. Cuentas
 
-- [ ] Crear una mutación para agregar una cuenta cliente
-- [ ] Crear una query para listar las cuentas enviando parámetros de **paginación** y filtrado de búsqueda (nombre/email) usando el método **aggregate** de **mongoose**
+- ✅ Mutación para agregar una cuenta cliente  
+- ✅ Query para listar cuentas con **paginación** y **búsqueda por nombre/email** utilizando `aggregate` de Mongoose
 
-##### B. Productos:
+### B. Productos
 
-- [ ] Crear una mutación para agregar un array de productos (debe asociarse a una cuenta cliente)
-- [ ] Crear una query listar los productos enviando parámetros de **paginación** y filtrado de búsqueda (nombre/sku) usando el método **aggregate** de **mongoose**
-- [ ] Sobre la query anterior, se debe agregar al **schema** del Producto, el campo Account para obtener los detalles de la cuenta asociada
+- ✅ Mutación para agregar un array de productos (asociados a una cuenta cliente)  
+- ✅ Query para listar productos con **paginación** y **búsqueda por nombre/sku** utilizando `aggregate` de Mongoose  
+- ✅ Campo `account` agregado al schema de Producto para retornar el detalle de la cuenta asociada
 
-> Para las mutaciones agregar archivos mockups en el proyecto que sirva para la creación de cuentas y/o productos
+> 💡 Se utilizaron **enums**, **types en root**, **validaciones** en queries y mutaciones, y se estructuró el proyecto con carpetas **utils** y **helpers**.
 
-> Opcional: Se considerará el uso de enums, types en root, validaciones en queries y mutaciones y creaciones de carpetas utils o helpers
+## ✅ Mejoras Implementadas
 
-#### Mejoras:
+- ✅ ESLint integrado  
+- ✅ Prettier integrado  
+- ✅ Tests unitarios agregados  
 
-```
-Según criterio del desarrollador
-```
 
-- [ ] Añadir eslint
-- [ ] Añadir prettier
-- [ ] Añadir test unitarios
-- [ ] Añadir un logger
 
-#### Extras:
-
-- [x] ¿Cómo crear un usuario en mongodb shell?
-
-```
-~ db.createUser({ user: 'equip', pwd: 'BackendChallenge', roles: ['readWrite', 'dbAdmin'] })
-```
-
-- [x] Iniciar servicio mongdb community
-
-```
-brew services start mongodb-community@7.0
-```
-
-- [x] Detener servicio mongdb community
-
-```
-brew services stop mongodb-community@7.0
-```
