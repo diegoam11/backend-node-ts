@@ -138,6 +138,11 @@ Al ejecutar `npm run test`, se muestra por consola el resultado, pero también s
 
 ---
 
+## Diagrama de Contenedores (Diagrama General de la Solución)
+
+![Diagrama de arquitectura](./diagramaEquip.drawio.png)
+
+
 ## 🚀 Despliegue
 
 El sistema fue desplegado en un servidor Ubuntu (Droplet en DigitalOcean), utilizando **Nginx** como proxy inverso para servir tanto el frontend como el backend bajo un mismo dominio con HTTPS, gracias a **Certbot** (Let's Encrypt).
